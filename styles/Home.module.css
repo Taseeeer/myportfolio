@@ -1,121 +1,227 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.outermost {
+  width: 99%;
+  margin: 0.7rem auto;
+  border-radius: 10rem;
+  border-radius: 15px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.flexone {
+  background-color: whitesmoke;
+}
+
+.theme {
+  width: 80%;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 10vh;
+  justify-content: flex-end;
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
+.outercontainer {
+  background-color: whitesmoke;
+  min-height: 50vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
+.myintro {
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.imcalled {
+  display: block;
+}
+
+.flexintwo {
+  width: 80%;
+  margin: auto;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 12rem;
 }
 
-.footer a {
+/* hand animation */
+@keyframes handwave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.hand {
+  display: inline-block;
+  animation: handwave 0.5s ease infinite;
+}
+
+.name {
+  display: inline-block;
+  background-color: red;
+  color: whitesmoke;
+  padding: 0.7rem 0.5rem;
+  transform: skew(-7deg); 
+  text-shadow: 1px 1px 1px #000;
+}
+
+.r {
+  display: inline-block;
+  background-color: #4fc3f7;
+  color: whitesmoke;
+  padding: 3px 3px 3px 0px;
+  transform: skew(-5deg);
+  font-size: 2rem;
+}
+
+.dot {
+  font-size: 1rem;
+}
+
+.des {
+  font-size: 1.5rem;
+}
+
+.des2 {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.gohere {
+  display: inline-block;
+  cursor: pointer;
+  background-image: linear-gradient(to right, whitesmoke 50%, red 50%);
+  background-size: 200%;
+  transition: background-position 0.5s;
+}
+.gohere:hover {
+  transform: skew(-7deg);
+  color: whitesmoke;
+  background-position: -100%;
+}
+
+
+.outercontainer2 {
+  background-color: whitesmoke;
+  min-height: 30vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-grow: 1;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.flexinthree {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.thesocials {
+  font-size: 3rem;
+  animation: handwave 0.5s ease infinite;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.footer {
+  min-height: 5vh;
+  margin: auto;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+.rights {
+  background-color: red;
+  color: whitesmoke;
+  font-weight: 450;
+  padding: 1rem;
+  text-shadow: 0.5px 0.5px 0.5px black;
+  transform: skew(-7deg);
+  display: inline-block;
+  margin: -2rem auto 0.5rem auto;
+  z-index: 1;
+  box-shadow: #000 0px 1px 2px 0px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+@media screen and (max-width: 1000px) {
+  .rights {
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+  } 
+
+  .name {
+    font-size: 2rem;
+  }
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
+
+/* for workings page */
+.outerworking {
+  width: 99%;
+  margin: 1rem auto;
+  background-color: whitesmoke;
+  min-height: 90vh;
+}
+
+.innerworking {
+  display: flex;
+  flex-direction: column;
+}
+
+.forh2 {
+  margin: 8rem 0;
+}
+
+.iwh2 {
+  margin: 5rem 0;
+  padding: 1rem;
+  font-weight: 450;
+}
+
+.backbutton {
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: whitesmoke;
   font-size: 1.5rem;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.backbutton:hover {
+  background-color: red;
+  color: white;
+  transition: 0.2s ease;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.csninja {
+  display: inline-block;
+  font-weight: 450;
+  background-image: linear-gradient(to right, whitesmoke 50%, red 50%);
+  padding: 1rem;
+  background-size: 200%;
+  transition: background-position 0.5s;
+}
+.csninja:hover {
+  transform: skew(-7deg);
+  color: whitesmoke;
+  background-position: -100%;
+  cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.githublink {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.githublink:hover {
+  color: red;
+  transition: 0.2s ease;
 }
