@@ -1,6 +1,4 @@
 import styles from '../styles/Home.module.css'
-import { GoMarkGithub } from "react-icons/go";
-import { FaFacebook } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { BsSun } from "react-icons/bs";
 import { BsMoon } from "react-icons/bs";
@@ -8,8 +6,6 @@ import { createContext, useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Line from "./line";
-
-export const forthere = createContext();
 
 export default function Landing() {
 
@@ -25,9 +21,16 @@ export default function Landing() {
     }, [theme]);
 
 
+    //the button sound
+    const handleTheme = () => {
+        return setTheme(!theme);
+    }
+
+
     const intend = "I've intended to showcase this website as a minimal one.";
     const tried = "Or at least I tried.";
-    const stories = `I like to play games, code random stuff & read stories from Hacker New.`;
+    const stories = `I like to play video games, code random stuff & read stories from `;
+    const hackernews = ` Hacker news.`;
     const animations = "And thanks to Framer-Motion for making these animations possible.";
 
     const sentence = {hidden: {opacity: 1}, visible: {opacity: 1, transition: {delay: 0.5, staggerChildren: 0.08}}};
@@ -42,8 +45,8 @@ export default function Landing() {
             style={{backgroundColor: `${theme ? "#22262e" : ""}`, color: `${theme ? "whitesmoke" : ""}`, transition: "0.5s ease"}}> 
                 <div className={styles.theme}> 
                     {theme ? <BsSun 
-                    onClick={() => setTheme(!theme)} /> 
-                    : <BsMoon onClick={() => setTheme(!theme)} />}
+                    onClick={handleTheme} /> 
+                    : <BsMoon onClick={handleTheme} />}
                 </div> 
             </div>
             <div className={styles.outercontainer} 
@@ -95,6 +98,16 @@ export default function Landing() {
                         variants={sentence}>
                             {/* I've intended to showcase this website as a minimal one. */}
                             {stories.split("").map((char, index) => {
+                                return (
+                                    <motion.span key={char + "-" + index} variants={letter}>{char}</motion.span>
+                                )
+                            })}
+                        </motion.span>
+                        <br />
+                        <motion.span styles={{display: "inline"}} animate="visible" initial="hidden" 
+                        variants={sentence}>
+                            {/* I've intended to showcase this website as a minimal one. */}
+                            {hackernews.split("").map((char, index) => {
                                 return (
                                     <motion.span key={char + "-" + index} variants={letter}>{char}</motion.span>
                                 )

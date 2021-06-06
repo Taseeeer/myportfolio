@@ -14,8 +14,9 @@ export default function Workings() {
     const [theme, setTheme] = useState(false);
     useEffect(() => {
         setTheme(JSON.parse(localStorage.getItem("theme")));
-
     }, [setTheme]);
+
+    
 
     const sentence = {hidden: {opacity: 1}, visible: {opacity: 1, transition: {delay: 0.5, staggerChildren: 0.08}}};
     const letter = { hidden: {opacity: 0, y:50}, visible: {opacity: 1, y:0} };
@@ -32,6 +33,8 @@ export default function Workings() {
 
 
     return (
+        <>
+
         <div className={styles.outerworking} style={{backgroundColor: `${theme ? "#22262e" : ""}`, color: `${theme ? "whitesmoke" : ""}`, transition: "0.5s ease"}}>
             <div className={styles.flexone} 
             style={{backgroundColor: `${theme ? "#22262e" : ""}`, color: `${theme ? "whitesmoke" : ""}`, transition: "0.5s ease"}}> 
@@ -116,5 +119,9 @@ export default function Workings() {
                 <br />
             </div>
         </div>
+        <footer className={styles.footer}>
+            <h2 className={styles.rights}>Signing off, © 2021.</h2>
+        </footer>
+        </>
     );
 };
