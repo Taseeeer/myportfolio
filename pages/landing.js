@@ -6,6 +6,7 @@ import { createContext, useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Line from "./line";
+import Landingtwo from './landingtwo';
 
 export default function Landing() {
 
@@ -145,6 +146,7 @@ export default function Landing() {
                 </div>
             </div>
         </div>
+        <Landingtwo themeValue={theme} />
         <footer className={styles.footer}>
             <h2 className={styles.rights}>Signing off, © 2021.</h2>
         </footer>
