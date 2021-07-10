@@ -26,36 +26,36 @@ export default function Landingtwo({ themeValue }) {
                     <div className={styles.toolsDiv}>
                             <div className={styles.outterbox}>
                                 <div className={styles.box}>
-                                    <Image src="/html5.png" alt="5" width={200} height={200} />
+                                    <img className={styles.img} src="/html5.png" alt="5"  />
                                 </div>
                             </div>
                             <div className={styles.outterbox}>
 
                                 <div className={styles.box}>
-                                    <Image src="/css.png" alt="css" width={175} height={157} />
+                                    <img className={styles.imgcss} src="/css.png" alt="css" />
                                 </div>
                             </div>
                             <div className={styles.outterbox}>
                                 <div className={styles.box}>
-                                    <Image src="/js.png" alt="javascript" width={180} height={180} />
+                                    <img className={styles.img} src="/js.png" alt="javascript" />
                                 </div>
                             </div>
                     </div>
                     <div className={styles.toolsDiv}>
                             <div className={styles.outterbox}>
                                 <div className={styles.box}>
-                                    <Image src="/r.png" alt="react" width={225} height={200} />
+                                    <img className={styles.imgreact} src="/r.png" alt="react" />
                                 </div>
                             </div>
                             <div className={styles.outterbox}>
 
                                 <div className={styles.box}>
-                                    <Image src="/next.png" alt="next" width={175} height={157} />
+                                    <img className={styles.img} src="/next.png" alt="next" />
                                 </div>
                             </div>
                             <div className={styles.outterbox}>
                                 <div className={styles.box}>
-                                    <Image src="/graphql.png" alt="graphql" width={180} height={180} />
+                                    <img className={styles.img} src="/graphql.png" alt="graphql" />
                                 </div>
                             </div>
                     </div>
